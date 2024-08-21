@@ -15,11 +15,44 @@ main h1 {
 }
 
 main .content_todoList {
-    width: 600px;
     background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
+/*resposive container*/
+@media (min-width: 576px) { 
+    
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    main .content_todoList {
+        width: 600px;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    main .content_todoList {
+        width: 600px;
+    }
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    main .content_todoList {
+        width: 600px;
+    }
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
+
+
 
 main .content_todoList .content_questionBase,
 main .content_todoList .content_footer {

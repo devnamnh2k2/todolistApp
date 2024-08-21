@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2 } from '@angular/core';
 import { Todo } from '../models/Todo.interface';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { TodolistService } from '../services/todolist.service';
@@ -7,13 +7,17 @@ import { debounceTime, fromEvent, map } from 'rxjs';
 @Component({
   selector: 'app-todoitem',
   templateUrl: './todoitem.component.html',
-  styleUrl: './todoitem.component.css'
+  styleUrl: './todoitem.component.css',
+  host: {
+    'class':'todoitem',
+  }
 })
 export class TodoitemComponent {
   @Input() todoItem!: Todo;
   chooseEditTask: boolean = false;
 
-  constructor(private todolistService: TodolistService) { }
+  constructor(private todolistService: TodolistService) { 
+  }
 
 
   /**
@@ -50,14 +54,9 @@ export class TodoitemComponent {
 
   }
 
-  /**
-   * 
-   * @param event 
-   */
-  handleKeyPress(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      this.toggleUiEdit();
-    }
+
+  handleBlur(event: any){
+    this.toggleUiEdit();
   }
 
   /**

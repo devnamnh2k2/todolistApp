@@ -23,7 +23,7 @@
 
         }@else {
         <mat-form-field appearance="outline" class="edit" floatLabel="auto">
-            <input matInput placeholder="1234" value="{{todoItem.title}}" (input)="handleChooseEdit($event)"(keyup)="handleKeyPress($event)">
+            <input matInput placeholder="1234" value="{{todoItem.title}}" (input)="handleChooseEdit($event)"(blur)="handleBlur($event)">
         </mat-form-field>
         }
 
