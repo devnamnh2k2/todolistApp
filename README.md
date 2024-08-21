@@ -3,4 +3,4 @@ Mô tả:
   - kiểm thử triển khai trên github
 
 Triển khai trên Vercel: 
-https://todolist-app-6jc5.vercel.app/
+https://todolist-app-sand.vercel.app/
