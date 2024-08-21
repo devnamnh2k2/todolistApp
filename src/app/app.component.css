@@ -1,0 +1,74 @@
+/* The :host selector is specific to Angular and isn't applicable in plain CSS */
+main {
+    margin: 0 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+main h1 {
+    font-weight: 500;
+    color: cadetblue;
+    letter-spacing: 5px;
+    padding-top: 1rem;
+}
+
+main .content_todoList {
+    width: 600px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main .content_todoList .content_questionBase,
+main .content_todoList .content_footer {
+    display: flex;
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+}
+
+main .content_questionBase {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+main .content_questionBase .icon_arrow {
+    background-color: rgb(230, 219, 219);
+    /* padding: 0.9rem; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+main .content_questionBase form {
+    flex: 1;
+}
+
+main .content_questionBase form .mat-mdc-form-field {
+    width: 100%;
+}
+
+main .content_questionBase form input {
+    width: 100%;
+}
+
+
+main .content_listItem{
+    max-height: 600px;
+    overflow-x: auto;
+}
+
+main .content_footer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .footer_info {
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+main .footer_info a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}

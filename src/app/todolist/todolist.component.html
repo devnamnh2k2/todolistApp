@@ -1,0 +1,16 @@
+@if(showSpinner){
+<div class="wrapper_spin">
+    <mat-spinner ngClass="matSpinner"></mat-spinner>
+</div>
+}@else {
+@if (todoslist.length !== 0) {
+@for (todo of todoslist; track todo.id; let i = $index) {
+<app-todoitem [todoItem]="todo"></app-todoitem>
+}
+} @else {
+
+<div class="image_thumbnail">
+    <img src="thumbnail_emptyTask.png" alt="thumbnail_emptyTask.png">
+</div>
+}
+}

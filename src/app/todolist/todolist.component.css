@@ -1,0 +1,21 @@
+.wrapper_spin {
+    position: relative;
+    height: 10rem;
+}
+
+.matSpinner {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.matSpinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image_thumbnail img {
+    object-fit: cover;
+    width: 100%;
+}

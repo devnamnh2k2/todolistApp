@@ -1,0 +1,34 @@
+<li class="item_todo">
+    <div class="view">
+        @if(!chooseEditTask){
+        <mat-checkbox class="wrapper_taskcontent" [checked]="todoItem.completed" (change)="handleStatusTask($event)">
+            {{todoItem.title}}
+        </mat-checkbox>
+
+        <div class="groupbtn_handle">
+            @if(!todoItem.completed){
+            <!-- //edit button -->
+            <button type="button" (click)="toggleUiEdit()" class="btn-edit" mat-mini-fab
+                aria-label="Example icon button with a edit icon">
+                <mat-icon class="icon_edit" aria-hidden="false" aria-label="Example mode_edit icon"
+                    fontIcon="mode_edit"></mat-icon>
+            </button>
+            }
+            <!-- //delete button -->
+            <button type="button" (click)="handleRemoveTask()" class="btn-delete" mat-mini-fab aria-label="Example icon button with a delete icon">
+                <mat-icon class="icon_delete" aria-hidden="false" aria-label="Example delete icon"
+                    fontIcon="delete"></mat-icon>
+            </button>
+        </div>
+
+        }@else {
+        <mat-form-field appearance="outline" class="edit" floatLabel="auto">
+            <input matInput placeholder="1234" value="{{todoItem.title}}" (input)="handleChooseEdit($event)"(keyup)="handleKeyPress($event)">
+        </mat-form-field>
+        }
+
+
+
+
+    </div>
+</li>

@@ -1,0 +1,58 @@
+li {
+    list-style: none;
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+}
+
+li:hover .view .groupbtn_handle {
+    visibility: visible;
+    opacity: 1;
+}
+
+li .view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+li .view .groupbtn_handle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+li .edit {
+    /* display: none; */
+    /* padding: 0.8rem; */
+    width: 100%;
+    outline: none;
+}
+
+.wrapper_taskcontent{
+    flex: 1;
+}
+
+
+::ng-deep .mdc-form-field.mat-internal-form-field {
+    width: 100%;
+}
+
+
+::ng-deep .wrapper_taskcontent.mat-mdc-checkbox-checked .mdc-form-field.mat-internal-form-field>.mdc-label {
+    text-decoration-line: line-through !important;
+    color: gray;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    /* position: absolute; */
+    display: none;
+}
+
+::ng-deep .mat-mdc-checkbox .mdc-form-field.mat-internal-form-field>.mdc-label {
+    font-size: 1.5rem !important;
+    /* width: 80% !important; */
+
+}

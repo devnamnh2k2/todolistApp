@@ -1,0 +1,36 @@
+<main>
+    <h1>Todos</h1>
+    <div class="content_todoList">
+      <div class="content_questionBase">
+        <form
+        autocomplete="off"
+        [formGroup]="todoForm"
+        (submit)="saveTodo()"
+        >
+            <mat-form-field>
+              <mat-label>What needs to be done?</mat-label>
+              <input matInput aria-label="wntbd" formControlName="title">
+              @if(title.invalid){
+                <mat-error>Title must be at least 3 characters long.</mat-error>
+              }
+            </mat-form-field>
+        </form>
+      </div>
+      <div class="content_listItem">
+        <app-todolist [chooseStatus]="currentStatusChoose.status"></app-todolist>
+      </div>
+      <div class="content_footer">
+        <div class="number_currentItem">{{todolistCurrent?.length}} items</div>
+        <section class="group_statusItem">
+          <mat-button-toggle-group aria-label="Font Style" (change)="chooseStatusTask($event)">
+            <mat-button-toggle value="all" [checked]="currentStatusChoose.status === 'all'">All</mat-button-toggle>
+            <mat-button-toggle value="active" [checked]="currentStatusChoose.status === 'active'">Active</mat-button-toggle>
+            <mat-button-toggle value="completed" [checked]="currentStatusChoose.status === 'completed'">Completed</mat-button-toggle>
+          </mat-button-toggle-group>
+        </section>
+      </div>
+    </div>
+    <div class="footer_info">
+      <p>Copyright Nam Huu Ngo - Contact to work: <a href="mailto:ngohuunam2002@gmail.com">NamNH</a></p>
+    </div>
+  </main>
